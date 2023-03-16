@@ -1,0 +1,29 @@
+.main-container{
+    display:flex ;
+    justify-content: space-around;
+}
+
+.container{
+    &--left,&--right{
+        display: grid;
+        grid-template-columns: repeat(5,100px);
+        grid-template-rows: repeat(3,100px);
+        background-color: red;
+        height: 300px;
+        width: 500px;
+    }
+    &--center{
+        display: grid;
+        grid-template-columns: repeat(11,50px);
+        
+    }
+}
+.box{
+    border: solid 1px black;
+    background-color: white;
+    padding: 1rem;
+}
+
+.box--checked{
+    background-color: green;
+}
