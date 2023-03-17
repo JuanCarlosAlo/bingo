@@ -3,7 +3,7 @@
     align-items: center;
     gap: 1rem;
     justify-content: space-around;
-    margin-bottom: 2rem;
+    
 }
 
 .container{
@@ -11,13 +11,13 @@
         display: grid;
         grid-template-columns: repeat(5,80px);
         grid-template-rows: repeat(3,80px);
-       
+       border: solid 6px rgba(9,58,121,1);
      
     }
     &--center{
         display: grid;
         grid-template-columns: repeat(11,50px);
-     
+        border: solid 6px rgba(9,58,121,1);
     }
 }
 .box{
@@ -30,13 +30,21 @@
 }
 
 .box--checked{
-    background-color: pink;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 .current-number--text{
     font-weight: 600;
     font-size: 1.5REM;
+    background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .current-number--number{
     font-weight: 600;
     font-size: 2.5REM;
+    background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
