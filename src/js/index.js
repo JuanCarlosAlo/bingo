@@ -1,11 +1,11 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import "../scss/styles.scss";
 
-const mainContainer = document.getElementById("main-container");
 const leftContainer = document.getElementById("container-left");
 const centerContainer = document.getElementById("container-center");
 const rightContainer = document.getElementById("container-right");
 const currentNumber = document.getElementById("current-number");
+const startButton = document.getElementById("start");
 
 const randomBingoBoxSmall = 15;
 const randomBingoBoxBig = 99;
@@ -19,7 +19,7 @@ const currentRandomNumber = () => {
   return Math.floor(Math.random() * randomNumberArray.length);
 };
 const randomNumber = () => {
-  return Math.floor(Math.random() * 99);
+  return Math.floor(Math.random() * 98 + 1);
 };
 
 const createDivsLeft = () => {
@@ -71,7 +71,11 @@ const setRandomNumberArray = () => {
   const number = randomNumberArray[index];
   randomNumberArray.splice(index, 1);
   numberToPlay = number;
-  currentNumber.textContent = numberToPlay;
+  if (numberToPlay) {
+    currentNumber.textContent = numberToPlay;
+  } else {
+    currentNumber.textContent = "FINISH!";
+  }
 };
 const setClassList = () => {
   allBoxes = document.querySelectorAll(".box");
@@ -96,8 +100,10 @@ const currentNumberText = () => {
   }
 };
 
-fillArray();
-currentNumberText();
+startButton.addEventListener("click", (e) => {
+  fillArray();
+  currentNumberText();
+});
 createDivsLeft();
 createDivsRight();
 createDivsCenter();

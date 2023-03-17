@@ -1,29 +1,42 @@
 .main-container{
     display:flex ;
+    align-items: center;
+    gap: 1rem;
     justify-content: space-around;
+    margin-bottom: 2rem;
 }
 
 .container{
     &--left,&--right{
         display: grid;
-        grid-template-columns: repeat(5,100px);
-        grid-template-rows: repeat(3,100px);
-        background-color: red;
-        height: 300px;
-        width: 500px;
+        grid-template-columns: repeat(5,80px);
+        grid-template-rows: repeat(3,80px);
+       
+     
     }
     &--center{
         display: grid;
         grid-template-columns: repeat(11,50px);
-        
+     
     }
 }
 .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: solid 1px black;
     background-color: white;
     padding: 1rem;
 }
 
 .box--checked{
-    background-color: green;
+    background-color: pink;
+}
+.current-number--text{
+    font-weight: 600;
+    font-size: 1.5REM;
+}
+.current-number--number{
+    font-weight: 600;
+    font-size: 2.5REM;
 }
